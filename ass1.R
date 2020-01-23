@@ -10,4 +10,9 @@ dim(autompg)
 
 # Question 1
 # not done
-hist(x=autompg$mpg)
+hist(
+  main="Histogram of Mile per Gallon",
+  xlab="MPG",
+  x=autompg$mpg,
+  xlim = c(0,50),
+  breaks = 5)
