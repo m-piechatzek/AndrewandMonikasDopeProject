@@ -16,3 +16,10 @@ hist(
   x=autompg$mpg,
   xlim = c(0,50),
   breaks = 5)
+
+# Question 2
+boxplot( data = autompg, 
+         lPer100km,  
+         ylab = "Litres per 100km", 
+         xlab = "Vehicles",
+         main = "Litres per 100km for All Vehicles")
