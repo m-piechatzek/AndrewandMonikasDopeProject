@@ -1,3 +1,4 @@
+library(ggplot2)
 # Insert the autompg file
 autompg = read.csv(file="autompg.ssv",sep=" ")
 # make sure you are in the correct directory on your computer -> use setwd("my/path/")
@@ -18,8 +19,18 @@ hist(
   breaks = 5)
 
 # Question 2
+# Missing Summary
 boxplot( data = autompg, 
          lPer100km,  
          ylab = "Litres per 100km", 
          xlab = "Vehicles",
          main = "Litres per 100km for All Vehicles")
+
+# Question 3
+# Missing Summary
+# Theres a small trend in locations of higher number of cylinders rising 
+boxplot(autompg$lPer100km ~ autompg$cyl, 
+        col="orange", 
+        main="Number of Cylinders for L/100KM", 
+        ylab="Litres Per 100KM",
+        xlab="Number of cylinders") 
