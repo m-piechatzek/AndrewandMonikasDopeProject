@@ -34,3 +34,13 @@ boxplot(autompg$lPer100km ~ autompg$cyl,
         main="Number of Cylinders for L/100KM", 
         ylab="Litres Per 100KM",
         xlab="Number of cylinders") 
+
+# Question 4
+# Missing Summary
+# its connection is between amount of gas the car needs in order to go a certain distance, all depending on the amount of cylinders
+boxplot(autompg$lPer100km ~ autompg$cyl, 
+        col="orange", 
+        main="Number of Cylinders for L/100KM", 
+        ylab="Litres Per 100KM",
+        xlab="Number of cylinders") 
+
