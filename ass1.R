@@ -87,3 +87,15 @@ parcoord(autompg[,1:9],col=coloursToPaint)
 # has more votes is where there is a higher population of people, even though it is a small area
 # physically. That is vice versa for blue areas, meaning blue covers more land physically but has less
 # density of people living in it.
+
+# Question 11
+pop = read.csv(file="pop.csv")
+plot(pop[,1:2], type="l", main="Population Growth Over Time")
+
+# Question 12
+
+# There was a stop in population growth during 1200 to 1400 due to the Black Death which killed
+# around 50 million people in Europe.
+
+# Bibliography
+# 
