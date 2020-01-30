@@ -6,6 +6,7 @@ The child mortality rates have lowered greatly from 1800 until 2015. This means 
 
 
 Question 2 For the year 1800, create a table like the one above and calculate the average life expectancy from the probability distribution.
+Is it: .433/2 + .567/2 / 2 = .25? I DONT GET IT do we add allllll of them up and then divide like this:  mean(mortality$old) = 0.862 ??
 
 
 Question 3 Use the formula above and either with math or a table of values (not both), justify what happens to life expectancy over time.
