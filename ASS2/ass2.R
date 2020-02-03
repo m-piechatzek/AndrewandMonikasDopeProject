@@ -23,3 +23,23 @@ View(mortality$lifeExpectancy)
 # Question 4
 
 # Question 5
+# Open File
+lungdata = read.csv(file.choose())
+
+#Age compairison to Smoker vs non-smoker
+boxplot(lungdata$age~lungdata$smoke, ylab= "Age", xlab= "Non-Smoker vs Smoker", main = "Age compaired to Smoker vs Non-smoker" )
+
+# Age comparision to FEV for smokers vs non-smokers
+ggplot(lungdata, aes(x=lungdata$age, y=lungdata$fev, color=lungdata$smoke)) + geom_point() + scale_color_brewer(palette = "Set1")
+
+# Gender comparison within FEV and age
+ggplot(lungdata, aes(x=lungdata$age, y=lungdata$fev, color=lungdata$sex)) + geom_point() + scale_color_brewer(palette = "Set2")
+
+# Height comparied to fev and smoke vs non
+
+ggplot(lungdata, aes(x=lungdata$ht, y=lungdata$fev, color=lungdata$smoke)) + geom_point() + scale_color_brewer(palette = "Set2")
+
+
+
+
+
