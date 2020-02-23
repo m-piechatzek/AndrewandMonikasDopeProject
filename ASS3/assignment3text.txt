@@ -5,7 +5,8 @@ Tests
 3. The null hypothesis is that there no difference between average sepal width of versicolor vs average sepal width of virginica. The p-value of 0.001819 tells us we must reject this null hypothesis as it is such a low p-value, and assume these samples are not different by mere chance.
 
 Our experiment is that we believe the average widths of Veriscolor is the same as the average widths of Virginica. If they are the same then we conclude that our original assumption is correct, therefore accepting the null hypothesis or we conclude that the averages are different, therefore rejecting our original assumption, which is rejecting the null hypothesis.
-4.
+
+4. For the original observation we saw a p-value of 0.001819 and through our permutation test we saw a p-value of 0.2746, which is a signifant difference. The test statistic from the original observation was 2.974 and 2.770 while the permutated test statistics was 3.022 and 3.124. For this permutation the t-test would would not have been a good approxiation, as we were originally rejecting the null hypothesis and now are accepting.
 5.
 
 CI
