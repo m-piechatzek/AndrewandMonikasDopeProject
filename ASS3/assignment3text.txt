@@ -1,6 +1,6 @@
 Versicolor & Virginica Irises
 Tests
-1.
+1. We have 95% confidence that if you gave us a value of a Versicolor sepal width, that it would land in the range between 2.68-2.86. If you gave us a value that is outside that range, we would reject it as being included in our sample.
 2.
 3.
 4.
