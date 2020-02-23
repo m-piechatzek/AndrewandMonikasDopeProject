@@ -1,8 +1,10 @@
 Versicolor & Virginica Irises
 Tests
 1. We have 95% confidence that if you gave us a value of a Versicolor sepal width, that it would land in the range between 2.68-2.86. If you gave us a value that is outside that range, we would reject it as being included in our sample.
-2.
-3.
+2. The p-value is 0.00000000000000022 which is under .05 so we would reject the null hypothesis however................ 
+3. The null hypothesis is that there no difference between average sepal width of versicolor vs average sepal width of virginica. The p-value of 0.001819 tells us we must reject this null hypothesis as it is such a low p-value, and assume these samples are not different by mere chance.
+
+Our experiment is that we believe the average widths of Veriscolor is the same as the average widths of Virginica. If they are the same then we conclude that our original assumption is correct, therefore accepting the null hypothesis or we conclude that the averages are different, therefore rejecting our original assumption, which is rejecting the null hypothesis.
 4.
 5.
 
