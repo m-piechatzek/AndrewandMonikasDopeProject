@@ -52,9 +52,35 @@ for(num in i) {
   pvalue = t.test(m)$p.value
   pvaulearray = append(pvaluearray, pvalue)
 }
-hist(pvaluearray, breaks = 100, main = "Histogram of P-values", ylab = "Frequency", xlab = "P-values")
+summaryhist(pvaluearray, breaks = 100, main = "Histogram of P-values", ylab = "Frequency", xlab = "P-values")
 #Theoretical
 #9.
+numSimulationsPern = 10 # or any reasonably large number
+allValuesOfn = 5:15 #good enough range
+theoreticalVariance = 25 #or any consistent number you want 
+arrayMedians = c()
+arrayOfDifferences = c()
+s.squared.for.n=function(n){
+  # simulate a sample of size n with 'theoreticalVariance', 'numSimulationsP # each time, 
+  # estimate the variance as shown on the assignment
+  
+  for(i in 1:numSimulationsPern){
+    sample = sample(500,n, replace=TRUE)
+    #cat("n", n)
+    diffVar =theoreticalVariance - (-(var(sample))/(n-1))
+    arrayOfDifferences = append(arrayOfDifferences, diffVar)
+  }
+  meanTemp = median(arrayOfDifferences)
+  arrayMedians <<- append(arrayMedians, meanTemp)
+  print(meanTemp)
+
+  return(arrayOfDifferences)
+  # store the difference estimated - theoreticalVariance in vector to return
+}
+
+allBiases = lapply(allValuesOfn,s.squared.for.n) #returns the results as list of vectors
+
+
 #10.
 
 #Bootstrap
