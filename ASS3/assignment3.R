@@ -55,19 +55,23 @@ for(num in i) {
 summaryhist(pvaluearray, breaks = 100, main = "Histogram of P-values", ylab = "Frequency", xlab = "P-values")
 #Theoretical
 #9.
-numSimulationsPern = 10 # or any reasonably large number
-allValuesOfn = 5:15 #good enough range
+numSimulationsPern = 1000 # or any reasonably large number
+allValuesOfn = 3:30 #good enough range
 theoreticalVariance = 25 #or any consistent number you want 
 arrayMedians = c()
 arrayOfDifferences = c()
+theoreticalBias = c()
 s.squared.for.n=function(n){
   # simulate a sample of size n with 'theoreticalVariance', 'numSimulationsP # each time, 
   # estimate the variance as shown on the assignment
   
   for(i in 1:numSimulationsPern){
-    sample = sample(500,n, replace=TRUE)
+    sample = sample(5000,n, replace=TRUE)
     #cat("n", n)
-    diffVar =theoreticalVariance - (-(var(sample))/(n-1))
+    diffVar =theoreticalVariance - ((-((var(sample))*((n-1)/n)))/(n-1))
+    #theoreticalBias = -(var(sample))*((n-1)/n)
+    #cat("cat",var(sample))
+    #print(((-((var(sample))*((n-1)/n)))/(n-1)))
     arrayOfDifferences = append(arrayOfDifferences, diffVar)
   }
   meanTemp = median(arrayOfDifferences)
@@ -79,7 +83,13 @@ s.squared.for.n=function(n){
 }
 
 allBiases = lapply(allValuesOfn,s.squared.for.n) #returns the results as list of vectors
-
+# Median Biases
+lines(boxplot(allBiases)$stats[3,], col="green",lwd=3)
+# First Quartile
+lines(boxplot(allBiases)$stats[2,], col="red",lwd=3)
+# Third Quartile
+lines(boxplot(allBiases)$stats[4,], col="blue",lwd=3)
+# Theoretical Bias
 
 #10.
 
