@@ -7,15 +7,22 @@ Tests
 Our experiment is that we believe the average widths of Veriscolor is the same as the average widths of Virginica. If they are the same then we conclude that our original assumption is correct, therefore accepting the null hypothesis or we conclude that the averages are different, therefore rejecting our original assumption, which is rejecting the null hypothesis.
 
 4. For the original observation we saw a p-value of 0.001819 and through our permutation test we saw a p-value of 0.2746, which is a signifant difference. The test statistic from the original observation was 2.974 and 2.770 while the permutated test statistics was 3.022 and 3.124. For this permutation the t-test would would not have been a good approxiation, as we were originally rejecting the null hypothesis and now are accepting.
-5.
+
+5.The results of our Analysis of Variance show that we should reject the null hypothesis that Versicolor and Virginica grow the same petal and sepal measurements.
+
+ 
+
+Analysis of Variance allows us to compare more than two groups of data, and whether a variable (Species in this case) has an effect on the data (measurements). We learned that the Species (Versicolor and Virginica) does affect the data in a meaningful way.
 
 CI
-6.
-7.
+6. The reported 95% confidence interval for this data is between -0.1262157 and 0.3262157. Since the data is binary, we know we cannot have negative true mean.
+
+7. When we bootstrap 1000 times we see that the confidence interval has changed, it is now between 0.08137428 and 0.11862572. This is more appropriate for binary data.
+
 
 Estimating type I error
-8.
-
+8. Our distribution does not appear to be uniform for values that are less than 0.1 becuase they are not close to equal frequencies.
+pic
 
 Theoretical
 Consistency & Bias

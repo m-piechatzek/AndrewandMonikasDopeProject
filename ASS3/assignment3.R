@@ -29,3 +29,33 @@ t.test(iris.2$Sepal.Width[iris.2$Species=="virginica"],iris.2$Sepal.Width[iris.2
 t.test(iris.2$Sepal.Length[iris.2$Species=="virginica"],iris.2$Sepal.Length[iris.2$Species=="versicolor"], alternative = "two.sided")
 t.test(iris.2$Petal.Width[iris.2$Species=="virginica"],iris.2$Petal.Width[iris.2$Species=="versicolor"], alternative = "two.sided")
 t.test(iris.2$Petal.Length[iris.2$Species=="virginica"],iris.2$Petal.Length[iris.2$Species=="versicolor"], alternative = "two.sided")
+
+#CI
+#6.
+t.test(x)
+#7.
+# Creating a population of 1000 with 100 1's and 900 0's
+y = rep(0,1000)
+i = c(1:1000)
+for(num in i){
+  if(num %% 10 ==0){
+    y[num]=1}
+}
+t.test(y)
+
+#Estimating type I error
+#8.
+pvaluearray = c()
+i = c(1:10000)
+for(num in i) {
+  m = rexp(5, rate=1)
+  pvalue = t.test(m)$p.value
+  pvaulearray = append(pvaluearray, pvalue)
+}
+hist(pvaluearray, breaks = 100, main = "Histogram of P-values", ylab = "Frequency", xlab = "P-values")
+#Theoretical
+#9.
+#10.
+
+#Bootstrap
+#11.
