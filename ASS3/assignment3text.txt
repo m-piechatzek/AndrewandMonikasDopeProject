@@ -28,6 +28,7 @@ Theoretical
 Consistency & Bias
 
 9.
+picsx4
 10.
 
 Bootstrap
