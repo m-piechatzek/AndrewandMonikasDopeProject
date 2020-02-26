@@ -75,15 +75,13 @@ s.squared.for.n=function(n){
   return(arrayOfDifferences)
   # store the difference estimated - theoreticalVariance in vector to return
 }
-
 allBiases = lapply(allValuesOfn,s.squared.for.n) #returns the results as list of vectors
 # Median Biases
-lines(boxplot(allBiases)$stats[3,], col="green",lwd=3)
+lines(boxplot(allBiases, xlab= "Size of n", ylab = "Samples", main="Median Biases")$stats[3,], col="green",lwd=3)
 # First Quartile
-lines(boxplot(allBiases)$stats[2,], col="red",lwd=3)
+lines(boxplot(allBiases, xlab= "Size of n", ylab = "Samples", main="First Quartile")$stats[2,], col="red",lwd=3)
 # Third Quartile
-lines(boxplot(allBiases)$stats[4,], col="blue",lwd=3)
-# Theoretical Bias
+lines(boxplot(allBiases, xlab= "Size of n", ylab = "Samples", main="Third Quartile")$stats[4,], col="blue",lwd=3)
 
 #Bootstrap
 #11.
