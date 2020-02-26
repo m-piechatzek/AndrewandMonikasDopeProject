@@ -1,7 +1,7 @@
 #Versicolor & Virginica Irises
 #1.
 t.test(iris$Sepal.Width[iris$Species=="versicolor"])
-#2.
+
 #3.
 t.test(iris$Sepal.Width[iris$Species=="virginica"],iris$Sepal.Width[iris$Species=="versicolor"], alternative = "two.sided")
 #4.
@@ -62,16 +62,10 @@ arrayMedians = c()
 arrayOfDifferences = c()
 theoreticalBias = c()
 s.squared.for.n=function(n){
-  # simulate a sample of size n with 'theoreticalVariance', 'numSimulationsP # each time, 
-  # estimate the variance as shown on the assignment
   
   for(i in 1:numSimulationsPern){
     sample = sample(5000,n, replace=TRUE)
-    #cat("n", n)
     diffVar =theoreticalVariance - ((-((var(sample))*((n-1)/n)))/(n-1))
-    #theoreticalBias = -(var(sample))*((n-1)/n)
-    #cat("cat",var(sample))
-    #print(((-((var(sample))*((n-1)/n)))/(n-1)))
     arrayOfDifferences = append(arrayOfDifferences, diffVar)
   }
   meanTemp = median(arrayOfDifferences)
@@ -91,7 +85,22 @@ lines(boxplot(allBiases)$stats[2,], col="red",lwd=3)
 lines(boxplot(allBiases)$stats[4,], col="blue",lwd=3)
 # Theoretical Bias
 
-#10.
-
 #Bootstrap
 #11.
+probOfMissingDatum = c()
+n=100
+
+for (i in 1:n) {
+  prob=0
+  tempsample = sample(n, i, replace=TRUE)
+  
+  for (x in 1:n) {
+    if (x %in% tempsample) {
+      prob = prob + 1;
+    }
+  }
+  probOfMissingDatum = append(probOfMissingDatum, (1-(prob/n)))
+}
+probOfMissingDatum
+plot(probOfMissingDatum, type="l", ylab="Probability of Missing Datum", xlab="Size of sample", main="Probability of Missing Datum versus Size")
+#The simulation/graph shows us that as a sample size increases the probability of missing particular datums decreases.

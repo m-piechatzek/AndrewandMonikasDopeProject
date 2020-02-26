@@ -29,7 +29,7 @@ Consistency & Bias
 
 9.
 picsx4
-10.
+10. The estimator is consistant in that the bias is diminishing as the sample size gets larger.
 
 Bootstrap
 11.
