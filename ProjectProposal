@@ -7,16 +7,15 @@ Monika Piechatzek (T00233103)
 
 Methods you plan to cover (and to what depth) 
 
-	Roman Emperors from 26 bc to 395 ad
-Unsupervised Learning: Association rules -> perhaps find a commonality for reason of death
 Spotify 2019 music usage
-Unsupervised Learning: Clustering -> find which genres were listened together on the same playlist 
-	Nobel Prize Winners
-Supervised Learning: Simple linear regression -> find if there's a rising trend in younger people receiving awards
-Supervised Learning: Time Series -> find if there is a trend in women gaining more prizes over time
-	
+- Unsupervised Learning: Association rules -> perhaps find which keys are associated with popularity 
+- Unsupervised Learning: Clustering -> find which genres were listened together on the same playlist 
+
+Nobel Prize Winners
+- Supervised Learning: Simple linear regression -> find if there's a rising trend in younger people receiving awards
  Data sets you plan to analyze
 
-Roman Emperors: https://www.kaggle.com/lberder/roman-emperors-from-26-bc-to-395-ad/data#
+Datasets
+
 Spotify:https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-01-21
 Nobel Winners:https://github.com/rfordatascience/tidytuesday/blob/master/data/2019/2019-05-14/nobel_winners.csv
