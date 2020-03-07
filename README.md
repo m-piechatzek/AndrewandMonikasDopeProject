@@ -1,2 +1,2 @@
-# AndrewandMonikasDopeProject
+# MonikasDopeProject
 R for Data Science Class
