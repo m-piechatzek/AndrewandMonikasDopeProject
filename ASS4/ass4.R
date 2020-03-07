@@ -13,6 +13,10 @@ summary(mp)
 with(autompg, plot(wt, mpg))
 abline(mp)
 #2
+mpglog = lm(mpg ~ wt, data=autompg)
+summary(mpglog)
+with(autompg, plot(wt, mpg, log="y"))
+abline(mpglog)
 #3
 #4
 
