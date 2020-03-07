@@ -1,6 +1,9 @@
 Regression & Association Rules
 
-1
+1. corresponding slope:
+interpretation of slope and its significance:
+
+I used linear regression to predict how the weight will effect the miles per gallon.
 2
 3
 4
