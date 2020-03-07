@@ -1,6 +1,12 @@
 # Regression & Association Rules
 
 #1
+autompg = read.csv(file="~/DATA SCIENCE/STAT3990/ASS1/AndrewandMonikasDopeProject/ASS1/autompg.ssv",sep=" ")
+# Remove column 'name'
+autompg[ , !(names(autompg) %in% c("name"))]
+# Transform orig into Factor
+autompg$orig = factor(autompg$orig)
+
 #2
 #3
 #4
