@@ -1,10 +1,8 @@
 Regression & Association Rules
 
-1. corresponding slope:
-interpretation of slope and its significance:
+1. I used linear regression to predict how the weight will effect the miles per gallon. The slope in my graph comparing mpg to weight, corresponds to the predictor variable, weight, by showing a downwards slope. The interpretation of this means as the weight of vehicle gets larger the mpg gets lower. If I were to explain the significance of this finding to someone, I would suggest to them that if they were to purchase a larger vehicle then they may have to consider spending more money on gas, since the miles per gallon or in other words, distance that they would get, would potentially be lower than when compared to a lighter sized vehicle. 
 
-I used linear regression to predict how the weight will effect the miles per gallon.
-2
+2. 
 3
 4
 
