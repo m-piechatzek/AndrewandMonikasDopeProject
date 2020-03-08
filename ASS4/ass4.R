@@ -50,4 +50,7 @@ summary(lm(log(mpg) ~ log(lPer100km), data=autompg))
 # Congressional Voting
 
 #6
+votes = read.csv(file.choose(), header=F)
+
+
 #7
