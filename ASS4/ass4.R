@@ -17,9 +17,29 @@ mpglog = lm(mpg ~ wt, data=autompg)
 summary(mpglog)
 with(autompg, plot(wt, mpg, log="y"))
 abline(mpglog)
-#3
-#4
 
+#3
+lPer100km = 235/autompg$mpg
+autompg = cbind(lPer100km, autompg)
+
+# the results of lp100km with mpg
+mp = lm(mpg ~ lPer100km, data=autompg)
+summary(mp)
+with(autompg, plot(lPer100km, mpg))
+abline(mp)
+# the results of the logarithm of lp100km with mpg
+mp = lm(mpg ~ lPer100km, data=autompg)
+summary(mp)
+with(autompg, plot(lPer100km, mpg, log="y"))
+abline(mp)
+# the results of the logarithm of lp100km with the logarithm of mpg
+mp = lm(log(mpg) ~ log(lPer100km), data=autompg)
+summary(mp)
+with(autompg, plot(lPer100km, mpg))
+abline(mp)
+#4
+lm(log(mpg) ~ log(lPer100km), data=autompg)
+summary(lm(log(mpg) ~ log(lPer100km), data=autompg))
 # Missing Items & association rules
 
 #5

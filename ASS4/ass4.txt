@@ -7,8 +7,11 @@ When you change to the logarithm of mileage and compare the results to the previ
 
 both graphs? Ask if code is correct and what it means as to why its the same?
 
-3.
-4
+3. 
+three graphs?
+
+4.
+The results of the logarithm of lp100km with the logarithm of mpg is perfectly linear. Meaning there is no difference between x and y, lPer100km and mpg, making the slope -1.000e+00 and intercept to 5.460e+00.
 
 # Missing Items & association rules
 
