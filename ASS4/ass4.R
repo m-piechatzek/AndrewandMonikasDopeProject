@@ -40,17 +40,21 @@ abline(mp)
 #4
 lm(log(mpg) ~ log(lPer100km), data=autompg)
 summary(lm(log(mpg) ~ log(lPer100km), data=autompg))
-# Missing Items & association rules
-
-#5
-#a
-#b
-#c
 
 # Congressional Voting
 
-#6
-votes = read.csv(file.choose(), header=F)
-
-
 #7
+votes = read.csv(file.choose(), header=F)
+summary(apriori(votes, parameter = list(supp = 0.2, conf = 0.8, maxlen=3)))
+# Print the top 4 rules
+associationrules = apriori(votes, parameter = list(supp = 0.2, conf = 0.8, maxlen=3))
+# sort by lift
+inspect(sort(associationrules[1:4], by="lift"))
+# ask what to do with ? ***********
+associationrules = apriori(votes, parameter = list(supp = 0.2, conf = 0.85, maxlen=3))
+inspect(sort(associationrules[1:4], by="lift"))
+
+associationrules = apriori(votes, parameter = list(supp = 0.2, conf = 0.75, maxlen=3))
+inspect(sort(associationrules[1:4], by="lift"))
+
+

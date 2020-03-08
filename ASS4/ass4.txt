@@ -40,10 +40,20 @@ The missing values from the UCI webpage are due to "voted present"", "voted pres
 
 In this dataset an missing value is given a '?' as a value in the table. Azevedo et al. state that there are two ways to deal with missing data, one way is to delete incomplete observations entirely. Another way is to replace any missing values with an estimated guessed value based on previous data. However both these ways effect the conclusions that can be gathered from the data. 
 
-In my opinion on what should be done in this case, since each vote is tied to an individual person, I believe it is best to delete the entire blank value. We cannot give a value to that specific person, because it would indicate we have voted for them without their approval.
+In my opinion on what should be done in this case, since each vote is tied to an individual person, I believe it is best to leave the ? as a third variable. We cannot give a value to that specific person, because it would indicate we have voted for them without their approval. However we cannot delete this person from the table as they have voted for other categories and that would skew the data. 
 
 7.
+Looks like there was a pattern found in the V7 columns that when there was a number of voters
+who voted 'no', they would also vote 'no' for column V6.
+Voters who also voted 'no' on V7 would tend to vote 'no' on V14
+Voters who voted 'no' on V7 would vote 'yes' on V10. 
+Voters who voted 'yes' on V12 would tend to be democrats.
 
+If we change the confidence threshold to .75 we see V7 'no' voters tend to vote 'no' on V15 instead of V6 but still V14. We still have voters who voted 'yes' on V12 would tend to be democrats. V12 'yes' voters would vote 'no' on V5.
+
+If we change the confidence threshold to .85 we see voters vote 'no' on V7 also vote 'no' on V6 and V13 but 'yes' on V8. We still have voters who voted 'yes' on V12 would tend to be democrats.
+
+It seems like the association rule of who voted 'yes' on V12 tend to be democrats has always been assumed in the various confidence levels.
 
 Bibliography
 
