@@ -11,7 +11,7 @@ both graphs? Ask if code is correct and what it means as to why its the same?
 three graphs?
 
 4.
-The results of the logarithm of lp100km with the logarithm of mpg is perfectly linear. Meaning there is no difference between x and y, lPer100km and mpg, making the slope -1.000e+00 and intercept to 5.460e+00.
+The results of the logarithm of lp100km with the mpg is perfectly linear. Meaning there is no difference between x and y, lPer100km and mpg, making the slope -22.64 and intercept to  76.90.
 
 # Missing Items & association rules
 

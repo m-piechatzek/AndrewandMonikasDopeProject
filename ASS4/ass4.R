@@ -28,14 +28,14 @@ summary(mp)
 with(autompg, plot(lPer100km, mpg))
 abline(mp)
 # the results of the logarithm of lp100km with mpg
-mp = lm(mpg ~ lPer100km, data=autompg)
+mp = lm(mpg ~ log(lPer100km), data=autompg)
 summary(mp)
 with(autompg, plot(lPer100km, mpg, log="y"))
 abline(mp)
 # the results of the logarithm of lp100km with the logarithm of mpg
 mp = lm(log(mpg) ~ log(lPer100km), data=autompg)
 summary(mp)
-with(autompg, plot(lPer100km, mpg))
+with(autompg, plot(lPer100km, mpg, log="y"))
 abline(mp)
 #4
 lm(log(mpg) ~ log(lPer100km), data=autompg)
@@ -51,9 +51,10 @@ associationrules = apriori(votes, parameter = list(supp = 0.2, conf = 0.8, maxle
 # sort by lift
 inspect(sort(associationrules[1:4], by="lift"))
 # ask what to do with ? ***********
+# conf .85
 associationrules = apriori(votes, parameter = list(supp = 0.2, conf = 0.85, maxlen=3))
 inspect(sort(associationrules[1:4], by="lift"))
-
+# conf .75
 associationrules = apriori(votes, parameter = list(supp = 0.2, conf = 0.75, maxlen=3))
 inspect(sort(associationrules[1:4], by="lift"))
 
