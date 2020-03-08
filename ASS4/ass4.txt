@@ -20,21 +20,33 @@ The results of the logarithm of lp100km with the logarithm of mpg is perfectly l
 a. 
 1/4 is the support of A=>B. 
 1/2 is the confidence of A=>B.
-(1/2)/(2/4) is the lift of A=>B.
+(1/2)/(2/4) is the lift of A=>B. Meaning that lift is 1 and therefore A and B are to independant occurances and we cannot say that A influences the apparence of B in any way.
 
 b. 
 The support: 1 / 5
 confidence: 1 / 3
-lift: (1 / 3) / (2 / 5)
+lift: (1 / 3) / (2 / 5) is 0.83 meaning that theres a chance that A influences the appearence of B in that if A is present then B most likely will not be present with it.
 //ask if correct? pretend like deleted value is 0
 
 c. support: 2 / 5
 confidence: 2 / 3
-lift: (2 / 3) / (3 / 5)
+lift: (2 / 3) / (3 / 5) is 1.1 meaning that A does influence the appearence of B in that if A does appear there is a higher chance that B will appear with it.
 // ask if he means B is also .4? so pretend like it is 1
 
 # Congressional Voting
 
 6.
+The missing values from the UCI webpage are due to "voted present"", "voted present to avoid conflict of interest"", and "did not vote or otherwise make a position known". This can happen for example if the voter may not have been informed fully about the topic or they may have a conflict of interest (n.a., 2019). 
 
-7
+In this dataset an missing value is given a '?' as a value in the table. Azevedo et al. state that there are two ways to deal with missing data, one way is to delete incomplete observations entirely. Another way is to replace any missing values with an estimated guessed value based on previous data. However both these ways effect the conclusions that can be gathered from the data. 
+
+In my opinion on what should be done in this case, since each vote is tied to an individual person, I believe it is best to delete the entire blank value. We cannot give a value to that specific person, because it would indicate we have voted for them without their approval.
+
+7.
+
+
+Bibliography
+
+Abstention. (2019, December 25). Retrieved March 7, 2020, from https://en.wikipedia.org/wiki/Abstention
+
+Azevedo, C., Proença, H., Salgado, C. M., & Vieira, S. M. (2016, September 10). Missing Data. Retrieved March 7, 2020, from https://link.springer.com/chapter/10.1007/978-3-319-43742-2_13
