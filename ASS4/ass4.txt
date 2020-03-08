@@ -15,10 +15,23 @@ The results of the logarithm of lp100km with the logarithm of mpg is perfectly l
 
 # Missing Items & association rules
 
-5
-a
-b
-c
+5.
+// is number 5 a question in itself or something to keep in mind when answering a-c?
+a. 
+1/4 is the support of A=>B. 
+1/2 is the confidence of A=>B.
+(1/2)/(2/4) is the lift of A=>B.
+
+b. 
+The support: 3 + 2 / 5
+confidence: 3 + 2 / 5
+lift: (3 + 2 / 3) / (2 / 5)
+//ask if correct? pretend like deleted value is 0
+
+c. support: 3 + 2 / 5
+confidence: 3 + 2 / 3
+lift: (3 + 2 / 3) / (3 / 5)
+// ask if he means B is also .4? so pretend like it is 1
 
 # Congressional Voting
 
