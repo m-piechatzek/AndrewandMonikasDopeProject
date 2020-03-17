@@ -13,7 +13,7 @@ summary(mp)
 with(autompg, plot(wt, mpg))
 abline(mp)
 #2
-mpglog = lm(mpg ~ wt, data=autompg)
+mpglog = lm(log(mpg) ~ wt, data=autompg)
 summary(mpglog)
 with(autompg, plot(wt, mpg, log="y"))
 abline(mpglog)
@@ -25,17 +25,17 @@ autompg = cbind(lPer100km, autompg)
 # the results of lp100km with mpg
 mp = lm(mpg ~ lPer100km, data=autompg)
 summary(mp)
-with(autompg, plot(lPer100km, mpg))
+with(autompg, plot(lPer100km, mpg, main="The results of lPer100km compared to MPG (Q3a)"))
 abline(mp)
 # the results of the logarithm of lp100km with mpg
 mp = lm(mpg ~ log(lPer100km), data=autompg)
 summary(mp)
-with(autompg, plot(lPer100km, mpg, log="y"))
+with(autompg, plot(lPer100km, mpg, log="y", main="The results of log lPer100km compared to MPG (Q3b)"))
 abline(mp)
 # the results of the logarithm of lp100km with the logarithm of mpg
 mp = lm(log(mpg) ~ log(lPer100km), data=autompg)
 summary(mp)
-with(autompg, plot(lPer100km, mpg, log="y"))
+with(autompg, plot(lPer100km, mpg, log="y", main="The results of log lPer100km compared to log MPG (Q3c)"))
 abline(mp)
 #4
 lm(log(mpg) ~ log(lPer100km), data=autompg)
@@ -50,7 +50,6 @@ summary(apriori(votes, parameter = list(supp = 0.2, conf = 0.8, maxlen=3)))
 associationrules = apriori(votes, parameter = list(supp = 0.2, conf = 0.8, maxlen=3))
 # sort by lift
 inspect(sort(associationrules[1:4], by="lift"))
-# ask what to do with ? ***********
 # conf .85
 associationrules = apriori(votes, parameter = list(supp = 0.2, conf = 0.85, maxlen=3))
 inspect(sort(associationrules[1:4], by="lift"))
