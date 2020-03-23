@@ -1,0 +1,10 @@
+Kernel Prediction with medians
+1.
+2. Smaller bandwidths lines are more exact as they are closer to the actual data points, for that particular dataset. Larger bandwdiths lines are further away and give a less accurate detail however they can be used on various datasets and give similar predictions.
+A higher bandwidth is better for prediction on various datasets, a smaller bandwidth is better for a single dataset.
+2 graphs
+3.
+
+KNN
+5 graphs
+The shape plotted changes in that the waiting times seem to go down and not have a lot of range. Therefore the eruptions appear to happen closer to each other, meaning less waiting time between eruptions. However compared to the original data, there is a lot more varability in waiting time. It's important to note the overall the scatterplots have the same shape regardless of the different values of k that range from 5% to 40%. Meaning the data is pretty consistant regardless of how small the data set is, eruptions that are longer tend to have longer waiting times.
